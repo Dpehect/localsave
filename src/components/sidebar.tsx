@@ -9,10 +9,10 @@ import {
 
 const menuItems = [
   { icon: Home, label: 'Ana Sayfa', href: '/' },
+  { icon: LayoutDashboard, label: 'Panelim', href: '/dashboard' },
   { icon: Search, label: 'Keşfet', href: '/explore' },
   { icon: MessageSquare, label: 'Topluluk', href: '/community' },
   { icon: Trophy, label: 'Liderlik', href: '/leaderboard' },
-  { icon: LayoutDashboard, label: 'Panel', href: '/merchant/dashboard' },
 ];
 
 export const Sidebar = () => {
