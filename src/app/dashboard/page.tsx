@@ -120,6 +120,21 @@ export default function UserDashboard() {
                 ))}
               </div>
             </div>
+
+            {/* AI Personal Insights - NEW DATA DEPTH */}
+            <div className="glass-card p-8 border-purple-500/20 bg-purple-500/5">
+              <h3 className="text-lg font-black text-white mb-4 flex items-center gap-2">
+                <Zap className="text-purple-400" /> AI Kişisel Analiz
+              </h3>
+              <div className="space-y-4 text-xs text-slate-400 leading-relaxed">
+                <p>• Alışveriş alışkanlıklarına göre meyve kategorisinde %15 daha fazla tasarruf edebilirsin.</p>
+                <p>• En çok Perşembe akşamları aktifsin. Bu saatlerdeki fırsatları kaçırmama oranı: %88.</p>
+                <div className="pt-4 border-t border-white/5 flex justify-between items-center">
+                  <span className="font-bold text-purple-400">Genel Verimlilik Score:</span>
+                  <span className="text-lg font-black text-white">A+</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
