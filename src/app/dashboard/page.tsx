@@ -13,7 +13,7 @@ const dailyMissions = [
 
 const recentActivities = [
   { store: 'Kardeşler Manav', product: '2kg Domates', saving: '₺45', impact: '1.2kg CO2', date: 'Bugün' },
-  { store: 'Özlem Pastanesi', product: '6'lı Poğaça', saving: '₺30', impact: '0.8kg CO2', date: 'Dün' },
+  { store: 'Özlem Pastanesi', product: "6'lı Poğaça", saving: '₺30', impact: '0.8kg CO2', date: 'Dün' },
 ];
 
 export default function UserDashboard() {
