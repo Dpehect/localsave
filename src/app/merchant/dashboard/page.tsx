@@ -1,8 +1,9 @@
 'use client';
 
 import { AddProductForm } from '@/features/dashboard/components/add-product-form';
+import { SalesAnalyticsChart } from '@/features/analytics/components/sales-analytics-chart';
 import { PageTransition } from '@/components/page-transition';
-import { LayoutDashboard, Package, TrendingUp, Users } from 'lucide-react';
+import { LayoutDashboard, Package, TrendingUp, Users, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function MerchantDashboardPage() {
@@ -23,18 +24,38 @@ export default function MerchantDashboardPage() {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Stats Bar */}
-          {stats.map((stat, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ y: -5 }}
-              className="glass-card p-8 border-white/5"
-            >
-              <stat.icon className={`h-8 w-8 ${stat.color} mb-4`} />
-              <p className="text-3xl font-black text-white">{stat.value}</p>
-              <p className="text-xs text-slate-500 font-black uppercase tracking-widest">{stat.label}</p>
-            </motion.div>
-          ))}
+          {/* Main Chart Section */}
+          <div className="lg:col-span-2">
+            <SalesAnalyticsChart />
+          </div>
+
+          {/* Monthly Goals */}
+          <div className="glass-card p-8 border-white/5 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-black text-white mb-2 flex items-center gap-2">
+                <Target className="text-cyan-400" /> Aylık Hedef
+              </h3>
+              <p className="text-xs text-slate-500 font-mono">12 Ton İsraf Önleme Hedefi</p>
+            </div>
+            
+            <div className="py-8">
+              <div className="flex justify-between mb-2">
+                <span className="text-sm font-bold text-slate-300">İlerleme</span>
+                <span className="text-sm font-black text-emerald-400">%74</span>
+              </div>
+              <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden border border-white/5">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: '74%' }}
+                  className="h-full cyber-gradient"
+                />
+              </div>
+            </div>
+
+            <div className="bg-emerald-500/10 p-4 rounded-2xl border border-emerald-500/20">
+              <p className="text-xs text-emerald-100 font-medium italic">"Bu hızla giderseniz ay sonunda 'Eco Merchant' rozeti kazanacaksınız!"</p>
+            </div>
+          </div>
 
           {/* Add Product Section */}
           <div className="lg:col-span-2">
